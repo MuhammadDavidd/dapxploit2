@@ -76,8 +76,16 @@ def skip_mission(token):
 				ketik(f"{red}______________{green}________________________{red}_______________")
 				ketik(f"""\33[0;34;44m\33[1;37m ✔ \33[1;34m\33[0m\33[   {blue}Add {green}{logs}{blue} 𝐌𝐨𝐧𝐞𝐲 {yellow}𝐀𝐝𝐝 𝐓𝐨 𝐘𝐨𝐮 𝐀𝐜𝐜𝐨𝐮𝐧𝐭""")
 				chat = backend_data['Logs']
-				uang= chat[len(chat)-1]['Message'].split()[5]
-				ketik(f"_____________________________________________________")
+				
+				ketik(f"____________________________________________if chat and isinstance(chat[-1], dict) and 'Message' in chat[-1]:
+    words = chat[-1]['Message'].split()
+    if len(words) > 5:
+        uang = words[5]
+        print(f"Total Penghasilan: Rp {uang}")
+    else:
+        print("Pesan tidak memiliki cukup kata.")
+else:
+    print("Logs kosong atau tidak sesuai format.")_________")
 				ketik(f"➤➤➤ {yellow}𝐓𝐨𝐭𝐚𝐥 𝐏𝐞𝐧𝐠𝐡𝐚𝐬𝐢𝐥𝐚𝐧 𝐍𝐠𝐞𝐩𝐞𝐭 𝐊𝐚𝐦𝐮 {red}Rp:{green}{uang}")
 				ketik(f"{red}______________{green}________________________{red}_______________")
 				
